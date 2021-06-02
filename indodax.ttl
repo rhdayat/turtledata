@@ -2,7 +2,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
-@prefix indodax: <https://raw.githubusercontent.com/rhdayat/turtledata/main/indodax.ttl#> .
+@prefix indodax: <http://raw.githubusercontent.com/rhdayat/turtledata/main/indodax.ttl#> .
 @prefix dbo:https: <dbpedia.org/ontology/> .
 
 
