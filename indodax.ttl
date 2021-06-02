@@ -3,7 +3,7 @@
 @prefix dbr: <http://dbpedia.org/resource/> .
 
 @prefix indodax: <http://raw.githubusercontent.com/rhdayat/turtledata/main/indodax.ttl#> .
-@prefix dbo:https: <dbpedia.org/ontology/> .
+@prefix dbo: <dbpedia.org/ontology/> .
 
 
 indodax:Market a rdfs:Class ;
