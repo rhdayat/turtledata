@@ -2,7 +2,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
-@prefix indodax: <https://raw.githubusercontent.com/rhdayat/shaclindodax/main/indodax.ttl#> .
+@prefix indodax: <https://raw.githubusercontent.com/rhdayat/turtledata/main/indodax.ttl#> .
 @prefix dbo:https: <dbpedia.org/ontology/> .
 
 
@@ -32,4 +32,4 @@ indodax:Bitcoin a indodax:Vol24h ;
 indodax:Bitcoin a indodax:PercentChange ;
 	indodax:PercentChange “0.88%“^^xsd:string ;
 	indodax:PercentChange indodax:BTC ;
-	owl:sameAs dbo:currencyCode .
+	indodax:PercentChange dbo:currencyCode .
