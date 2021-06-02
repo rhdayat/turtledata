@@ -4,7 +4,6 @@
 
 @prefix indodax: <https://raw.githubusercontent.com/rhdayat/shaclindodax/main/indodax.ttl#> .
 @prefix dbo:https: <dbpedia.org/ontology/> .
-@prefix wk:https: <lod-cloud.net/dataset/wiki/> .
 
 
 indodax:Market a rdfs:Class ;
@@ -25,12 +24,10 @@ indodax:PercentChange a rdf:Property ;
 indodax:Bitcoin a indodax:Market ;
 	indodax:Price “812.498.000“^^xsd:Integer ;
 	indodax:market indodax:BTC ;
-	owl:sameAs wk:Cryptocurrency .
 
 indodax:Bitcoin a indodax:Vol24h ;
 	indodax:Vol24h “75,1bn“^^xsd:string ;
 	indodax:Vol24h indodax:BTC ;
-	owl:sameAs wk:Cryptocurrency .
 
 indodax:Bitcoin a indodax:PercentChange ;
 	indodax:PercentChange “0.88%“^^xsd:string ;
