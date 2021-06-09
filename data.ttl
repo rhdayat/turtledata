@@ -1,35 +1,40 @@
-@prefix schema: <http://schema.org/> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
-@prefix indodax: <http://raw.githubusercontent.com/rhdayat/turtledata/main/indodax.ttl#> .
+@prefix indodax: <http://raw.githubusercontent.com/rhdayat/turtledata/main/data.ttl#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 
 
-indodax:Market a rdfs:Class ;
-	rdfs:SubClassof schema:Offer .
+indodax:Market a rdfs:Class .
+indodax:Market rdfs:SubClassof schema:Offer .
+
+indodax:Aset a rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain indodax:Market .
 
 indodax:Price a rdf:Property ;
-	rdfs:domain indodax:Market ;
-	rdfs:range xsd:string schema:Offer .
+    rdfs:range xsd:integer ;
+    rdfs:domain indodax:Market .
 
 indodax:Vol24h a rdf:Property ;
-	rdfs:domain indodax:Market ;
-	rdfs:range xsd:string schema:Offer .
-
-indodax:PercentChange a rdf:Property ;
-	rdfs:domain indodax:Market ;
-	rdfs:range xsd:string schema:Offer .
+    rdfs:range xsd:string ;
+    rdfs:domain indodax:Market .
 
 indodax:Bitcoin a indodax:Market ;
-	indodax:Price “812.498.000“^^xsd:Integer ;
-	indodax:market indodax:BTC ;
+  schema:offer dbr:price, dbr:priceCurrency;
+  indodax:Aset "BTC"^^xsd:text ;
+	indodax:Price "812.498.000" ;
+  indodax:Vol24h "75,1bn"^^xsd:text .
 
-indodax:Bitcoin a indodax:Vol24h ;
-	indodax:Vol24h “75,1bn“^^xsd:string ;
-	indodax:Vol24h indodax:BTC ;
+indodax:Tokenomy a indodax:Market ;
+  schema:offer dbr:price, dbr:priceCurrency;
+  indodax:Aset "TEN"^^xsd:text ;
+	indodax:Price "695" ;
+  indodax:Vol24h "1,0bn"^^xsd:text .
 
-indodax:Bitcoin a indodax:PercentChange ;
-	indodax:PercentChange “0.88%“^^xsd:string ;
-	indodax:PercentChange indodax:BTC ;
-	indodax:PercentChange dbo:currencyCode .
+indodax:AAVE a indodax:Market ;
+  schema:offer dbr:price, dbr:priceCurrency;
+	indodax:Aset "AAVEE"^^xsd:text ;
+  indodax:Price "5.350.002" ;
+  indodax:Vol24h "1,4bn"^^xsd:text .
